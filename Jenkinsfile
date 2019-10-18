@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("allegro62/NodeApp")
+        app = docker.build("allegro62/nodeapp")
     }
 
     stage('Test image') {
