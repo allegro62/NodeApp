@@ -4,7 +4,7 @@ FROM node:7-onbuild
 # set maintainer
 LABEL maintainer "raj.rajesh622@gmail.com"
 WORKDIR /home/ubuntu/jenkins_home/workspace/Job1/
-COPY main.js ~
+COPY main.js /root/
 
 RUN node ~/main.js
 
