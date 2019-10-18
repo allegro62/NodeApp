@@ -2,7 +2,11 @@
 FROM node:7-onbuild
 
 # set maintainer
-LABEL maintainer "crudsinfotechng@gmail.com"
+LABEL maintainer "raj.rajesh622@gmail.com"
+WORKDIR ~
+COPY /home/ubuntu/jenkins_home/workspace/Job1/main.js ~
+
+RUN node main.js
 
 # set a health check
 HEALTHCHECK --interval=5s \
