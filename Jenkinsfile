@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("sadanand/mynodeapp2")
+        app = docker.build("allegro62/NodeApp")
     }
 
     stage('Test image') {
@@ -31,7 +31,7 @@ node {
                 echo "Trying to Push Docker Build to DockerHub"
 	    
 	    //withDockerRegistry(credentialsId: 'dokcerid', url: 'https://hub.docker.com/') {
-	    sh label: 'Docker Login', script: 'docker login --username "sadanand" --password "sada@123"'
+	    sh label: 'Docker Login', script: 'docker login --username "rajesh622" --password "abc_12345"'
     	    app.push("${env.BUILD_NUMBER}")
             app.push("latest")
 	//}
